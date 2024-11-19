@@ -18,9 +18,7 @@ function inputEdgeCase(input) {
                     r.close();
                 
             } 
-            else if(answer.toLowerCase() === 'n') {
-                promptForInput();
-            } 
+            else if(answer.toLowerCase() === 'n') { promptForInput();} 
             else {
                 console.log('Invalid Response, type y or n');
                 handleInput(input);
