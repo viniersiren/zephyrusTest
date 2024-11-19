@@ -38,10 +38,10 @@ function promptForInput() {
     })
 }
 promptForInput();
+
+
 //Edge Cases: check for only integers, integers in string, display warning,
     //y to continue n to restart
-//Check for more efficient solutions
-
 
 /*r.question('Enter a string to be reversed: ', (input)=> { ** deprecated
     const output = reverseString(input);
