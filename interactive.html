@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
     <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Change Heading Text</title>
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
             body {
-                background-color: black;
-                color: white;
-                font-family: Arial, sans-serif;
+                background-color: #121212;
+                color: #f5f5f5;
+                font-family: 'Arial', sans-serif;
                 text-align: center;
                 margin: 0;
                 padding: 0;
@@ -20,42 +26,54 @@
             }
 
             h1 {
-                font-size: 2em;
-                margin-bottom: 20px;
+                font-size: 2.5em;
+                margin-bottom: 30px;
+                padding: 10px;
+                border: 2px solid #f5f5f5;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            h1:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.05);
             }
 
             button {
-                background-color: white;
-                color: black;
-                border: none;
-                padding: 10px 20px;
+                background-color: #f5f5f5;
+                color: #121212;
+                border: 2px solid #f5f5f5;
+                padding: 12px 25px;
                 font-size: 1.2em;
+                font-weight: bold;
                 cursor: pointer;
-                border-radius: 5px;
-                transition: background-color 0.3s ease;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             }
 
             button:hover {
-                background-color: #ddd;
+                background-color: #e0e0e0;
+                border-color: #e0e0e0;
+                transform: scale(1.05);
             }
         </style>
     </head>
     <body>
-
-        <h1 id="heading">Original Heading Text</h1>
-        <button id="changeTextButton">Change Heading Text</button>
+        <h1 id="heading">Hello There</h1>
+        <button id="changeTextButton">Change</button>
 
         <script>
             // JavaScript to toggle the heading text when the button is clicked
             const heading = document.getElementById('heading');
             const button = document.getElementById('changeTextButton');
 
-            button.addEventListener('click', function() {
-                heading.textContent = heading.textContent === 'Original Heading Text'
-                                    ? 'Heading Text Changed!'
-                                    : 'Original Heading Text';
+            button.addEventListener('click', function () {
+                heading.textContent = heading.textContent === 'Hello There'
+                    ? 'Goodbye Then'
+                    : 'Hello There';
             });
         </script>
-
     </body>
-    </html>
+</html>
